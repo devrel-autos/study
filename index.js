@@ -11,14 +11,12 @@ app.get('/', (req, res) => {
 
 app.get('/user/:id', (req, res) => {
     const ID = req.params
-    console.log(ID.id)
     res.json({'userid': ID.id})
 })
 
 app.get('/oauth', (req, res) => {
     const code = req.query
-    console.log(code)
-    res.send(`<a href="https://www.swit.io">Swit바로가기</a>`)
+    res.send(code)
 })
 
 app.get('/sound/:name', (req, res) => {
