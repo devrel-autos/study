@@ -19,6 +19,12 @@ app.get('/oauth', (req, res) => {
     res.send(code)
 })
 
+app.get('/copy', (req, res) => {
+    const text = req.query
+    console.log(text)
+    res.send(text)
+})
+
 app.get('/sound/:name', (req, res) => {
     const { name } = req.params
 
